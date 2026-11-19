@@ -1,0 +1,255 @@
+/* ==========================================================================
+   PRINT / PDF EXPORT STYLESHEET
+   Strict Two-Page Hardware Engineering Portfolio for A4 / Letter PDF Export
+   ========================================================================== */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 15mm;
+}
+
+@media print {
+  /* Reset and base print setup */
+  *, *::before, *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: #111827 !important; /* High contrast dark charcoal for print readability */
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background: #FFFFFF !important;
+    font-size: 8.5pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide screen-only interactive elements */
+  .navbar,
+  .mobile-nav-toggle,
+  .btn-print,
+  .page-switch-banner,
+  .footer-cta,
+  .lightbox-modal,
+  .toast-notice,
+  .zoom-indicator,
+  .image-thumbnails,
+  .no-print,
+  .filter-btn {
+    display: none !important;
+  }
+
+  /* Two-page strict break containers */
+  .print-page-1 {
+    page-break-before: avoid !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    min-height: 98vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .print-page-2 {
+    page-break-before: always !important;
+    break-before: page !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+    min-height: 98vh;
+    box-sizing: border-box;
+  }
+
+  /* Print Header Styles */
+  .print-header {
+    border-bottom: 2pt solid #0284C7 !important;
+    padding-bottom: 8pt;
+    margin-bottom: 10pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .print-header h1 {
+    font-size: 18pt !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    color: #0F172A !important;
+    margin-bottom: 2pt;
+  }
+
+  .print-header .print-subtitle {
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    color: #0284C7 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .print-contact-box {
+    text-align: right;
+    font-family: 'JetBrains Mono', Consolas, monospace !important;
+    font-size: 7.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Section Headings in Print */
+  .print-sec-title {
+    font-size: 10.5pt !important;
+    font-weight: 800 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #0F172A !important;
+    border-bottom: 1pt solid #CBD5E1 !important;
+    padding-bottom: 2pt;
+    margin-top: 8pt;
+    margin-bottom: 6pt;
+    display: flex;
+    align-items: center;
+    gap: 4pt;
+  }
+
+  .print-sec-title::before {
+    content: "■";
+    color: #0284C7 !important;
+    font-size: 8pt;
+  }
+
+  /* Skills Matrix in Print */
+  .print-skills-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6pt !important;
+    margin-bottom: 8pt;
+  }
+
+  .print-skill-group {
+    border: 0.5pt solid #E2E8F0 !important;
+    padding: 5pt 7pt !important;
+    border-radius: 3pt;
+  }
+
+  .print-skill-group-title {
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
+    color: #0369A1 !important;
+    margin-bottom: 3pt;
+    text-transform: uppercase;
+  }
+
+  .print-skill-tags {
+    font-size: 7.5pt !important;
+    color: #334155 !important;
+    line-height: 1.35;
+  }
+
+  /* Print Project Cards (Page 2) */
+  .print-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7pt;
+  }
+
+  .print-project-item {
+    border: 0.5pt solid #CBD5E1 !important;
+    border-left: 3pt solid #0284C7 !important;
+    padding: 6pt 8pt !important;
+    border-radius: 2pt;
+    page-break-inside: avoid !important;
+  }
+
+  .print-project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2pt;
+  }
+
+  .print-project-name {
+    font-size: 9.5pt !important;
+    font-weight: 800 !important;
+    color: #0F172A !important;
+  }
+
+  .print-project-tag {
+    font-family: 'JetBrains Mono', Consolas, monospace !important;
+    font-size: 6.8pt !important;
+    font-weight: 700 !important;
+    color: #0369A1 !important;
+    border: 0.5pt solid #93C5FD !important;
+    padding: 1pt 3pt;
+    border-radius: 2pt;
+  }
+
+  .print-project-desc {
+    font-size: 7.8pt !important;
+    color: #334155 !important;
+    margin-bottom: 3pt;
+    line-height: 1.35;
+  }
+
+  .print-project-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8pt;
+    font-size: 7.2pt !important;
+    color: #475569 !important;
+    font-family: 'JetBrains Mono', Consolas, monospace !important;
+    background: #F8FAFC !important;
+    padding: 3pt 5pt;
+    border-radius: 2pt;
+  }
+
+  .print-project-highlight {
+    font-weight: 700 !important;
+    color: #0F172A !important;
+  }
+
+  /* Print Thumbnail / Real Photo Layout */
+  .print-project-with-img {
+    display: grid !important;
+    grid-template-columns: 1fr 65mm !important;
+    gap: 7pt;
+    align-items: center;
+  }
+
+  .print-project-img {
+    width: 65mm !important;
+    height: 32mm !important;
+    object-fit: cover !important;
+    border: 0.5pt solid #CBD5E1 !important;
+    border-radius: 2pt;
+  }
+
+  /* Achievements Grid in Print */
+  .print-achieve-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4pt;
+    margin-top: 5pt;
+  }
+
+  .print-achieve-card {
+    border: 0.5pt solid #E2E8F0 !important;
+    padding: 4pt 6pt;
+    border-radius: 2pt;
+    font-size: 7.5pt !important;
+  }
+
+  .print-achieve-card strong {
+    color: #0F172A !important;
+  }
+
+  .print-footer-note {
+    margin-top: 6pt;
+    border-top: 0.5pt solid #CBD5E1 !important;
+    padding-top: 3pt;
+    display: flex;
+    justify-content: space-between;
+    font-size: 6.8pt !important;
+    color: #64748B !important;
+    font-family: 'JetBrains Mono', Consolas, monospace !important;
+  }
+}

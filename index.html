@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshidha Shree G.R. | Biomedical Engineering & Hardware Portfolio</title>
+  <meta name="description" content="Engineering portfolio of Akshidha Shree G.R. - Biomedical Engineering student passionate about PCB design, embedded systems, electronics, and medical device innovation.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  
+  <!-- Favicon / Circuit Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300E5FF' stroke-width='2'><rect x='4' y='4' width='16' height='16' rx='2'/><path d='M9 9h6v6H9z'/><path d='M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3'/></svg>">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Akshidha Shree G.R. Portfolio">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <path d="M9 9h6v6H9z"/>
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">AKSHIDHA SHREE G.R.</span>
+          <span class="brand-title">BME // PCB & Embedded Systems</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item active">
+            <a href="index.html">
+              <span class="mono" style="color: var(--accent-cyan); font-size: 0.75rem;">01 //</span>
+              <span>About & Skills</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="projects.html">
+              <span class="mono" style="color: var(--text-muted); font-size: 0.75rem;">02 //</span>
+              <span>Projects & Hardware</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="portfolio-print.html" title="View print-ready 2-page document">
+              <span class="mono" style="color: var(--accent-amber); font-size: 0.75rem;">DOC //</span>
+              <span>Two-Page View</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="portfolio-print.html" class="btn btn-secondary btn-sm" title="Print or save as 2-page PDF portfolio">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          <span class="btn-print-text">Export 2-Page PDF</span>
+        </a>
+
+        <a href="https://github.com/Akshi06-shree" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/akshidha-shree-bba34b329" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- SECTION: HERO -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Bio & Core Title -->
+          <div class="hero-content">
+            <div class="hero-meta-badge">
+              <span class="pulse-dot"></span>
+              <span>INNOVATION AMBASSADOR @ DSCET • CLASS OF 2028</span>
+            </div>
+
+            <h1 class="hero-name">AKSHIDHA SHREE G.R.</h1>
+            
+            <h2 class="hero-headline">
+              Engineering Ideas into Real-World Hardware
+            </h2>
+
+            <p class="hero-description">
+              I am a third-year Biomedical Engineering student interested in the intersection of electronics, embedded systems and healthcare innovation. I enjoy exploring how circuits, sensors and microcontrollers can be combined to develop practical hardware solutions.
+            </p>
+
+            <div class="hero-actions">
+              <a href="projects.html" class="btn btn-primary">
+                <span>Explore My Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <a href="https://github.com/Akshi06-shree" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Profile</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/akshidha-shree-bba34b329" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Connect on LinkedIn">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <!-- Quick Academic Telemetry -->
+            <div class="hero-quick-meta">
+              <div class="meta-item">
+                <span class="label">Institution</span>
+                <span class="value">DSCET, Mamallapuram, TN</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">Degree Program</span>
+                <span class="value">B.E. Biomedical Engineering</span>
+              </div>
+              <div class="meta-item">
+                <span class="label">Core Focus</span>
+                <span class="value">KiCad PCB • ESP32 • Medical Sensors</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Hardware Telemetry Box -->
+          <div class="hero-visual">
+            <div class="hardware-card">
+              <div class="hardware-card-header">
+                <div class="circuit-indicator">
+                  <span class="dot"></span>
+                  <span class="mono">STATUS: ACTIVE HARDWARE LAB</span>
+                </div>
+                <span class="tech-tag emerald">DSCET INNOVATION</span>
+              </div>
+
+              <div class="bench-spec-list">
+                <div class="bench-spec-item">
+                  <div class="title">Hardware Focus</div>
+                  <div class="data" style="color: var(--accent-cyan);">PCB & Embedded</div>
+                </div>
+                <div class="bench-spec-item">
+                  <div class="title">EDA Tool</div>
+                  <div class="data">KiCad 8.0 Suite</div>
+                </div>
+                <div class="bench-spec-item">
+                  <div class="title">Microcontroller</div>
+                  <div class="data">ESP32 / Arduino</div>
+                </div>
+                <div class="bench-spec-item">
+                  <div class="title">Prototyping</div>
+                  <div class="data" style="color: var(--accent-emerald);">Soldering & Test</div>
+                </div>
+              </div>
+
+              <!-- Animated Circuit Traces SVG Accent -->
+              <div class="hero-circuit-art">
+                <svg viewBox="0 0 400 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Circuit Grid & Traces -->
+                  <path d="M20 70H80L110 30H190L220 70H300L330 110H380" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                  <path d="M40 110H100L130 70H200L230 110H340" stroke="#0EA5E9" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                  <path d="M80 30L60 10H10" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                  <path d="M220 70V20H280" stroke="#00E5FF" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                  
+                  <!-- Via Pads & Test Points -->
+                  <circle cx="80" cy="70" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="110" cy="30" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="190" cy="30" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="220" cy="70" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="300" cy="70" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="330" cy="110" r="4" fill="#070B12" stroke="#00E5FF" stroke-width="2"/>
+                  <circle cx="130" cy="70" r="3.5" fill="#070B12" stroke="#0EA5E9" stroke-width="1.5"/>
+
+                  <!-- Central IC Silkscreen Outline -->
+                  <rect x="145" y="55" width="60" height="30" rx="3" fill="#0D1424" stroke="#00E5FF" stroke-width="1.5"/>
+                  <text x="175" y="74" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle" font-weight="bold">NE555</text>
+                  <!-- IC Pins -->
+                  <line x1="152" y1="50" x2="152" y2="55" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="167" y1="50" x2="167" y2="55" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="182" y1="50" x2="182" y2="55" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="197" y1="50" x2="197" y2="55" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="152" y1="85" x2="152" y2="90" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="167" y1="85" x2="167" y2="90" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="182" y1="85" x2="182" y2="90" stroke="#94A3B8" stroke-width="2"/>
+                  <line x1="197" y1="85" x2="197" y2="90" stroke="#94A3B8" stroke-width="2"/>
+                </svg>
+              </div>
+
+              <!-- Live Card Footer -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+                <span>TRACE: 2-LAYER FR4</span>
+                <span style="color: var(--accent-cyan);">COPPER: 1oz // LEAD-FREE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT ME -->
+    <section class="section" id="about" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="mono">// 01. PROFILE</span>
+          </div>
+          <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Narrative Column -->
+          <div class="about-content">
+            <p>
+              I am an undergraduate engineering student pursuing my Bachelor of Engineering in Biomedical Engineering at <strong>Dhanalakshmi Srinivasan College of Engineering and Technology (DSCET)</strong>, Mamallapuram. My academic journey combines core biomedical instrumentation concepts with an energetic and hands-on dedication to hardware prototyping, PCB layout design, and embedded systems.
+            </p>
+
+            <div class="highlight-box">
+              <span class="mono" style="color: var(--accent-cyan); font-weight: 700; display: block; margin-bottom: 0.35rem;">DEVELOPING PRACTICAL ENGINEERING SKILLS</span>
+              Rather than confining engineering to theory, I actively build hardware prototypes. From drafting schematics and routing traces in KiCad to breadboarding sensor circuits with the ESP32 and through-hole soldering physical PCBs, I am dedicated to learning through direct bench experimentation.
+            </div>
+
+            <p>
+              Serving as an <strong>Innovation Ambassador at DSCET</strong>, I engage with technical competitions, hackathons, and hardware challenges that require bridging interdisciplinary fields: turning physiological signals into actionable embedded data, developing safety-critical monitoring layers, and creating assistive mechanisms designed with the patient in mind.
+            </p>
+
+            <!-- 6 Key Areas of Interest -->
+            <h3 style="font-size: 1.15rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+              Core Engineering Interests
+            </h3>
+
+            <div class="interests-grid">
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Electronic Circuit Design</div>
+                  <div class="interest-desc">Analog & digital circuit calculations, timing circuits, component selection, power distribution.</div>
+                </div>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                    <line x1="7" y1="2" x2="7" y2="22"/>
+                    <line x1="17" y1="2" x2="17" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Custom PCB Design (KiCad)</div>
+                  <div class="interest-desc">Schematic capture, PCB footprint assignment, trace routing, clearance checking, fabrication.</div>
+                </div>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Microcontroller Systems</div>
+                  <div class="interest-desc">ESP32 & Arduino development, peripheral interfacing, GPIO control, UART/I2C communication.</div>
+                </div>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Biomedical Instrumentation</div>
+                  <div class="interest-desc">Bio-potential acquisition (ECG/EMG), analog front-end filtering (AD8232), noise reduction.</div>
+                </div>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Human-Centred Innovation</div>
+                  <div class="interest-desc">Assistive tremor damping devices, ergonomic mechanical gauntlets, and safety-focused monitoring.</div>
+                </div>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="interest-title">Medical Device R&amp;D</div>
+                  <div class="interest-desc">Translating clinical requirements into testable hardware prototypes and fail-safe safety architectures.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Academic & Institutional Profile Column -->
+          <div class="about-sidebar">
+            <div class="education-card">
+              <span class="institution-badge">EDUCATION &amp; AFFILIATION</span>
+              <h3 class="edu-degree">B.E. Biomedical Engineering</h3>
+              <p class="edu-college">Dhanalakshmi Srinivasan College of Engineering and Technology (DSCET)</p>
+              
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                Affiliated with Anna University • Mamallapuram, Tamil Nadu, India.
+              </p>
+
+              <ul class="edu-meta-list">
+                <li class="edu-meta-item">
+                  <span class="label">Current Year</span>
+                  <span class="val">Third Year (Junior)</span>
+                </li>
+                <li class="edu-meta-item">
+                  <span class="label">Expected Graduation</span>
+                  <span class="val" style="color: var(--accent-cyan);">2028</span>
+                </li>
+                <li class="edu-meta-item">
+                  <span class="label">Leadership Role</span>
+                  <span class="val" style="color: #34D399;">Innovation Ambassador</span>
+                </li>
+                <li class="edu-meta-item">
+                  <span class="label">Focus Domain</span>
+                  <span class="val">Hardware &amp; Medical Devices</span>
+                </li>
+                <li class="edu-meta-item">
+                  <span class="label">Lab Experience</span>
+                  <span class="val">KiCad PCB, Solder, Breadboard</span>
+                </li>
+              </ul>
+
+              <!-- Contact Card snippet -->
+              <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+                <span class="mono" style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase;">Direct Contact</span>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem;">
+                  <span class="mono" style="font-size: 0.82rem; color: var(--accent-cyan);">akshidha78@gmail.com</span>
+                  <button class="copy-email-btn btn btn-outline btn-sm" data-email="akshidha78@gmail.com" title="Copy Email">
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Engineering Philosophy Card -->
+            <div style="background: rgba(14, 165, 233, 0.04); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.5rem;">
+              <div class="tech-tag amber" style="margin-bottom: 0.85rem;">HONEST STUDENT TRAJECTORY</div>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                I am actively developing my technical toolkit. Rather than presenting static theory, my portfolio reflects genuine project hours spent troubleshooting circuits, testing code on microcontrollers, and iterating physical hardware designs.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TECHNICAL SKILLS -->
+    <section class="section" id="skills" style="background: rgba(13, 20, 36, 0.3); border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="mono">// 02. COMPETENCIES</span>
+          </div>
+          <h2 class="section-title">Technical Skills</h2>
+          <p style="color: var(--text-secondary); max-width: 650px; margin-top: 0.5rem;">
+            Curated engineering capabilities organized by technical domain. Represented as hands-on skill chips based on practical lab and project experience.
+          </p>
+        </div>
+
+        <div class="skills-container">
+
+          <!-- 1. Electronics and PCB Design -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                  <line x1="7" y1="2" x2="7" y2="22"/>
+                  <line x1="17" y1="2" x2="17" y2="22"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
+                  <circle cx="7" cy="17" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Electronics &amp; PCB Design</h3>
+                <span class="mono" style="font-size: 0.72rem; color: var(--accent-cyan);">HARDWARE EDA &amp; FABRICATION</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-group">
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>KiCad</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Schematic Design</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>PCB Layout &amp; Routing</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Through-Hole Component Assembly</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Soldering &amp; Rework</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Basic Circuit Testing &amp; Troubleshooting</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Timer Circuits (NE555)</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker"></span>
+                <span>Power Supply &amp; Coin Cell Layout</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 2. Embedded Systems -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <line x1="9" y1="1" x2="9" y2="4"/>
+                  <line x1="15" y1="1" x2="15" y2="4"/>
+                  <line x1="9" y1="20" x2="9" y2="23"/>
+                  <line x1="15" y1="20" x2="15" y2="23"/>
+                  <line x1="20" y1="9" x2="23" y2="9"/>
+                  <line x1="20" y1="15" x2="23" y2="15"/>
+                  <line x1="1" y1="9" x2="4" y2="9"/>
+                  <line x1="1" y1="15" x2="4" y2="15"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Embedded Systems</h3>
+                <span class="mono" style="font-size: 0.72rem; color: #34D399;">FIRMWARE &amp; SENSORS</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-group">
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>ESP32 DevKit</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>Arduino Ecosystem</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>Embedded C Fundamentals</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>Sensor Interfacing</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>UART &amp; I2C Communication</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>Microcontrollers, Sensors &amp; Actuators</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>16x2 LCD &amp; Status Displays</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #34D399;"></span>
+                <span>GPIO Interrupts &amp; Timers</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 3. Programming & Engineering Tools -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Programming &amp; Engineering Tools</h3>
+                <span class="mono" style="font-size: 0.72rem; color: #FBBF24;">COMPUTATION &amp; 3D CAD</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-group">
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>Python</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>MATLAB &amp; Simulink</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>Autodesk Fusion 360</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>SolidWorks</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>Bioinformatics</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>HTML &amp; CSS</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>Tinkercad Circuits</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #FBBF24;"></span>
+                <span>Streamlit Framework</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- 4. Biomedical Engineering -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Biomedical Engineering</h3>
+                <span class="mono" style="font-size: 0.72rem; color: #C084FC;">CLINICAL &amp; PHYSIOLOGICAL CONCEPTS</span>
+              </div>
+            </div>
+
+            <div class="skill-tags-group">
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Biomedical Instrumentation</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Human Anatomy &amp; Physiology</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Medical Equipment Familiarity</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Biomedical Signal Processing fundamentals</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>AD8232 ECG Sensor Acquisition</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Physiological Signal Noise Filtering</span>
+              </span>
+              <span class="skill-chip">
+                <span class="chip-marker" style="background: #C084FC;"></span>
+                <span>Brain MRI ROI Segmentation</span>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: ENGINEERING MINDSET -->
+    <section class="section" id="mindset" style="border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="mono">// 03. PHILOSOPHY</span>
+          </div>
+          <h2 class="section-title">Engineering Mindset</h2>
+        </div>
+
+        <div class="mindset-card">
+          <div class="tech-tag" style="margin-bottom: 1.25rem;">LEARNING BY BUILDING</div>
+
+          <blockquote class="mindset-quote">
+            "I enjoy learning by building. From understanding circuit diagrams to designing PCB layouts and experimenting with microcontrollers, I am continuously developing my ability to turn engineering concepts into functional prototypes."
+          </blockquote>
+
+          <!-- 5-Step Workflow: Concept to Copper -->
+          <div style="margin-bottom: 1rem;">
+            <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;">
+              // MY PROTOTYPING WORKFLOW: FROM CONCEPT TO COPPER
+            </span>
+          </div>
+
+          <div class="mindset-workflow">
+            
+            <div class="workflow-step">
+              <div class="workflow-num">PHASE 01</div>
+              <div class="workflow-name">Problem &amp; Schematic</div>
+              <div class="workflow-detail">Analyze biomedical requirement, select components, simulate timing/amplification in KiCad / Tinkercad.</div>
+            </div>
+
+            <div class="workflow-step">
+              <div class="workflow-num">PHASE 02</div>
+              <div class="workflow-name">Breadboard Proof</div>
+              <div class="workflow-detail">Wire discrete ICs and sensors to confirm pin logic, signal levels, and baseline response.</div>
+            </div>
+
+            <div class="workflow-step">
+              <div class="workflow-num">PHASE 03</div>
+              <div class="workflow-name">PCB Layout</div>
+              <div class="workflow-detail">Route 2-layer traces in KiCad, verify DRC clearances, place ground copper pours and silkscreen.</div>
+            </div>
+
+            <div class="workflow-step">
+              <div class="workflow-num">PHASE 04</div>
+              <div class="workflow-name">Assembly &amp; Solder</div>
+              <div class="workflow-detail">Hand solder through-hole components, inspect joints for solder bridges, verify power rails.</div>
+            </div>
+
+            <div class="workflow-step">
+              <div class="workflow-num">PHASE 05</div>
+              <div class="workflow-name">Firmware &amp; Test</div>
+              <div class="workflow-detail">Deploy ESP32 / microcontroller logic, acquire real signals, and validate system stability.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Direct Link to Page 2 Banner -->
+        <div class="page-switch-banner">
+          <div class="switch-content">
+            <div class="tech-tag emerald" style="margin-bottom: 0.5rem;">CONTINUE TO PAGE 2</div>
+            <h3>Explore My Projects &amp; Hardware Experience</h3>
+            <p>
+              Inspect 5 practical hardware and biomedical projects featuring custom fabricated PCBs, ESP32 prototypes, sensor integration, and conference award credentials.
+            </p>
+          </div>
+          <a href="projects.html" class="btn btn-primary" style="white-space: nowrap;">
+            <span>Go to Page 2: Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER & CONTACT SECTION -->
+  <footer class="footer-cta">
+    <div class="container">
+      
+      <div class="cta-box">
+        <span class="tech-tag" style="margin-bottom: 1rem;">GET IN TOUCH</span>
+        <h2 class="cta-headline">Let's Connect for Hardware &amp; Engineering Opportunities</h2>
+        <p class="cta-message">
+          "Interested in hardware innovation, embedded systems, PCB development and collaborative engineering projects. Always open to learning, building and exploring new technical challenges."
+        </p>
+
+        <div class="cta-actions">
+          <a href="mailto:akshidha78@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>akshidha78@gmail.com</span>
+          </a>
+
+          <button class="copy-email-btn btn btn-secondary" data-email="akshidha78@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>Copy Email Address</span>
+          </button>
+
+          <a href="https://github.com/Akshi06-shree" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/akshidha-shree-bba34b329" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span style="font-weight: 600; color: var(--text-primary);">Akshidha Shree G.R.</span> • B.E. Biomedical Engineering (2028) • DSCET
+        </div>
+        <div class="mono" style="font-size: 0.75rem;">
+          ENGINEERING PORTFOLIO // DESIGNED FOR HARDWARE HACKATHONS &amp; INTERNSHIPS
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Full-Resolution Image Inspection -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image inspection viewer">
+    <div class="lightbox-container">
+      <button class="lightbox-close" aria-label="Close modal">&times;</button>
+      <img src="" alt="Hardware View" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span id="toastText">Email copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

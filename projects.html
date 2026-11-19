@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering Projects | Akshidha Shree G.R. - Hardware Portfolio</title>
+  <meta name="description" content="Hardware and biomedical engineering projects by Akshidha Shree G.R. - Custom KiCad PCB design, ESP32 prototypes, ECG signal acquisition, and healthcare innovation.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/print.css" media="print">
+  
+  <!-- Favicon / Circuit Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300E5FF' stroke-width='2'><rect x='4' y='4' width='16' height='16' rx='2'/><path d='M9 9h6v6H9z'/><path d='M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3'/></svg>">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Akshidha Shree G.R. Portfolio">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <path d="M9 9h6v6H9z"/>
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">AKSHIDHA SHREE G.R.</span>
+          <span class="brand-title">BME // PCB & Embedded Systems</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="index.html">
+              <span class="mono" style="color: var(--text-muted); font-size: 0.75rem;">01 //</span>
+              <span>About & Skills</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="projects.html">
+              <span class="mono" style="color: var(--accent-cyan); font-size: 0.75rem;">02 //</span>
+              <span>Projects & Hardware</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="portfolio-print.html" title="View print-ready 2-page document">
+              <span class="mono" style="color: var(--accent-amber); font-size: 0.75rem;">DOC //</span>
+              <span>Two-Page View</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="portfolio-print.html" class="btn btn-secondary btn-sm" title="Print or save as 2-page PDF portfolio">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+            <rect x="6" y="14" width="12" height="8"/>
+          </svg>
+          <span class="btn-print-text">Export 2-Page PDF</span>
+        </a>
+
+        <a href="https://github.com/Akshi06-shree" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/akshidha-shree-bba34b329" target="_blank" rel="noopener noreferrer" class="icon-btn" title="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Page Header & Filter Controls -->
+      <div class="projects-header-wrapper">
+        <div class="section-badge">
+          <span class="mono">// PAGE 02: HARDWARE &amp; PRACTICAL EXPERIENCE</span>
+        </div>
+        <h1 class="section-title" style="font-size: 2.75rem; margin-bottom: 0.75rem;">
+          Engineering Projects
+        </h1>
+        <p style="color: var(--text-secondary); max-width: 780px; font-size: 1.05rem;">
+          Hands-on hardware engineering builds, custom PCB design, microcontroller-based medical prototypes, and biomedical signal acquisition. All documentation features actual physical prototypes and laboratory testbenches.
+        </p>
+
+        <!-- Category Filter Buttons -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+          <button class="filter-btn" data-filter="pcb">PCB &amp; Electronics</button>
+          <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+          <button class="filter-btn" data-filter="biomedical">Biomedical Devices</button>
+          <button class="filter-btn" data-filter="signal">Signal &amp; Image AI</button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           PROJECT 1: CUSTOM HEART-SHAPED LED PCB (SPECIAL VISUAL IMPORTANCE)
+           ==================================================================== -->
+      <article class="project-card featured-pcb" data-category="pcb hardware" id="heart-pcb">
+        <div class="project-card-layout">
+          
+          <!-- Left Info Pane -->
+          <div class="project-info-pane">
+            <div class="project-meta-header">
+              <span class="project-index">PROJECT // 01 • FEATURED HARDWARE</span>
+              <span class="tech-tag" style="background: rgba(224, 138, 68, 0.15); border-color: rgba(224, 138, 68, 0.4); color: #F59E0B;">
+                PHYSICALLY FABRICATED PCB
+              </span>
+            </div>
+
+            <h2 class="project-title">Custom Heart-Shaped LED PCB</h2>
+            <span class="project-category-badge">PCB Design and Electronics • KiCad EDA</span>
+
+            <p class="project-description">
+              "My first self-designed and fabricated PCB project. Designed the circuit schematic and PCB layout using KiCad, completed circuit checks and explored the complete process from circuit design to physical PCB fabrication."
+            </p>
+
+            <!-- Hardware Specifications Grid -->
+            <div class="project-spec-grid">
+              <div class="spec-block">
+                <div class="spec-label">Core IC &amp; Logic</div>
+                <div class="spec-value">NE555 Precision Timer (Astable Mode)</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Power Source</div>
+                <div class="spec-value">CR2450 3V Coin Cell Battery</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Passives &amp; Actuators</div>
+                <div class="spec-value">16x Through-Hole LEDs, Resistors, Cap</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">EDA &amp; Simulation Tools</div>
+                <div class="spec-value">KiCad 8.0, Tinkercad, PCB Fab</div>
+              </div>
+            </div>
+
+            <!-- Key Highlights & Contribution -->
+            <div style="margin-bottom: 0.75rem;">
+              <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase;">
+                // Technical Highlights &amp; Engineering Execution:
+              </span>
+            </div>
+            <ul class="project-highlights-list">
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Schematic Design:</strong> Configured NE555 astable oscillator with RC timing network for pulse generation to drive heart perimeter LEDs.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>PCB Layout &amp; Routing:</strong> Created custom heart outline, balanced 2-layer copper traces, routed power rails, and added custom silkscreen ("Forever and Always").</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Component Placement:</strong> Optimized radial symmetry of LED rings, integrated top-mount SPDT switch and reverse-mounted CR2450 coin cell battery retainer.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Through-Hole Soldering:</strong> Hand soldered 16 LEDs, NE555 socket, resistors, and decoupling capacitors; inspected for solder bridges and verified polarity.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Physical PCB Fabrication:</strong> Managed full fabrication workflow from Gerber generation and DRC validation to physical assembly and bench power testing.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="project-tech-tags">
+              <span class="project-tag">KiCad</span>
+              <span class="project-tag">PCB Layout</span>
+              <span class="project-tag">Through-Hole Soldering</span>
+              <span class="project-tag">NE555 Timer</span>
+              <span class="project-tag">CR2450 Battery</span>
+              <span class="project-tag">Circuit Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Right Gallery / Visual Pane -->
+          <div class="project-media-pane">
+            <div class="main-image-container" title="Click to inspect high-resolution hardware photo">
+              <img src="assets/images/heart-pcb-assembled-lit.jpg" 
+                   alt="Assembled Heart-Shaped PCB powered on with illuminated LEDs held in hand" 
+                   id="main-heart-img">
+              <div class="zoom-indicator">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span>Click to Inspect</span>
+              </div>
+            </div>
+
+            <!-- Multi-Image Thumbnails -->
+            <div class="image-thumbnails">
+              <div class="thumb-item active" 
+                   data-full="assets/images/heart-pcb-assembled-lit.jpg" 
+                   data-caption="Physically Fabricated PCB: Handheld active test showing illuminated LEDs and NE555 timer circuit">
+                <img src="assets/images/heart-pcb-assembled-lit.jpg" alt="Fabricated Lit Board">
+              </div>
+              <div class="thumb-item" 
+                   data-full="assets/images/heart-pcb-kicad-traces.jpg" 
+                   data-caption="KiCad PCB Editor: 2-layer routing showing red (top) & blue (bottom) traces with custom heart boundary">
+                <img src="assets/images/heart-pcb-kicad-traces.jpg" alt="KiCad Trace Routing">
+              </div>
+              <div class="thumb-item" 
+                   data-full="assets/images/heart-pcb-3d-top.jpg" 
+                   data-caption="KiCad 3D Viewer: Front view with NE555, through-hole LEDs, resistors, switch and silkscreen text">
+                <img src="assets/images/heart-pcb-3d-top.jpg" alt="KiCad 3D Top View">
+              </div>
+              <div class="thumb-item" 
+                   data-full="assets/images/heart-pcb-3d-bottom.jpg" 
+                   data-caption="KiCad 3D Viewer: Back view showing CR2450 coin cell battery retainer and silkscreen label 'MY FIRST PCB'">
+                <img src="assets/images/heart-pcb-3d-bottom.jpg" alt="KiCad 3D Bottom View">
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+              4 Gallery Views: Fabricated Hardware • KiCad Routing • 3D Top • 3D Bottom
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- ====================================================================
+           PROJECT 2: MORTISAFE (BEST PAPER AWARD AT CONFERENCE)
+           ==================================================================== -->
+      <article class="project-card" data-category="embedded biomedical" id="mortisafe">
+        <div class="project-card-layout">
+          
+          <!-- Left Info Pane -->
+          <div class="project-info-pane">
+            <div class="project-meta-header">
+              <span class="project-index">PROJECT // 02</span>
+              <span class="tech-tag amber">
+                🏆 BEST PAPER AWARD • TECHNICAL CONFERENCE
+              </span>
+            </div>
+
+            <h2 class="project-title">MortiSafe – Secondary Safety Alert Layer for Mortuary Chambers</h2>
+            <span class="project-category-badge">Biomedical Hardware and Embedded Systems • Healthcare Safety</span>
+
+            <p class="project-description">
+              "A healthcare safety concept developed to provide an additional alert mechanism for mortuary chamber staff using sensor-based monitoring."
+            </p>
+
+            <!-- Hardware Specifications Grid -->
+            <div class="project-spec-grid">
+              <div class="spec-block">
+                <div class="spec-label">Controller Platform</div>
+                <div class="spec-value">ESP32 DevKit V1 Microcontroller</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Telemetry Display</div>
+                <div class="spec-value">16x2 I2C Liquid Crystal Display (LCD)</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Visual Indicators</div>
+                <div class="spec-value">Tri-color LEDs (Active / Normal / Alert)</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Key Achievement</div>
+                <div class="spec-value" style="color: #FBBF24;">Best Paper Award at Technical Conference</div>
+              </div>
+            </div>
+
+            <!-- Key Highlights & Contribution -->
+            <div style="margin-bottom: 0.75rem;">
+              <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase;">
+                // Engineering Contribution &amp; Prototyping:
+              </span>
+            </div>
+            <ul class="project-highlights-list">
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Sensor Selection:</strong> Researched sensitive physiological and environmental sensors capable of operating reliably in low-temperature mortuary chamber environments.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Circuit Development:</strong> Designed breadboard layout with level shifting, GPIO pull-up networks, and current limiting resistors for status LEDs.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Hardware Integration:</strong> Programmed ESP32 firmware in C++ to drive real-time I2C status updates to the 16x2 LCD ("MORTISAFE ACTIVE Monitoring...") and manage alert thresholds.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Prototype Testing:</strong> Conducted bench validation under continuous monitoring states to ensure alert triggering with zero false positives.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="project-tech-tags">
+              <span class="project-tag">ESP32</span>
+              <span class="project-tag">Sensor Integration</span>
+              <span class="project-tag">Embedded C++</span>
+              <span class="project-tag">I2C 16x2 LCD</span>
+              <span class="project-tag">Hardware Prototyping</span>
+              <span class="project-tag">Conference Best Paper</span>
+            </div>
+          </div>
+
+          <!-- Right Gallery / Visual Pane -->
+          <div class="project-media-pane">
+            <div class="main-image-container" title="Click to view full-resolution prototype bench test">
+              <img src="assets/images/mortisafe-esp32-prototype.jpg" 
+                   alt="MortiSafe ESP32 DevKit V1 breadboard prototype displaying 'MORTISAFE ACTIVE Monitoring...' on 16x2 LCD">
+              <div class="zoom-indicator">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span>Live Breadboard Rig</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; padding: 0.85rem; background: rgba(7, 11, 18, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              <span class="mono" style="color: #34D399; font-weight: 700; display: block; margin-bottom: 0.25rem;">PROTOTYPE STATUS: BENCH VALIDATED</span>
+              Hardware rig showing ESP32 DevKit V1, I2C character LCD showing active system state, tri-color LED indicators (green illuminated for safe status), and breadboard wiring harness.
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- ====================================================================
+           PROJECT 3: BIO NOVA – ADAPTIVE HAND STABILIZATION DEVICE
+           ==================================================================== -->
+      <article class="project-card" data-category="biomedical hardware" id="bionova">
+        <div class="project-card-layout">
+          
+          <!-- Left Info Pane -->
+          <div class="project-info-pane">
+            <div class="project-meta-header">
+              <span class="project-index">PROJECT // 03</span>
+              <span class="tech-tag" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.4); color: #C084FC;">
+                CONCEPT / DESIGN PROTOTYPE PHASE
+              </span>
+            </div>
+
+            <h2 class="project-title">Bio Nova – Adaptive Hand Stabilization Device</h2>
+            <span class="project-category-badge">Human-Centred Hardware and Biomedical Device Design • Assistive Tech</span>
+
+            <p class="project-description">
+              "A wearable hand stabilization concept designed to reduce involuntary hand tremors while preserving intentional movements during precision activities."
+            </p>
+
+            <!-- Important Non-Clinical Disclaimer -->
+            <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid #F59E0B; padding: 0.75rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 1.5rem; font-size: 0.85rem; color: #FCD34D;">
+              <strong>Development Stage:</strong> Design and engineering prototype concept. Presented honestly as exploratory biomedical hardware R&amp;D (not claimed as clinically validated).
+            </div>
+
+            <!-- Hardware Specifications Grid -->
+            <div class="project-spec-grid">
+              <div class="spec-block">
+                <div class="spec-label">CAD Environment</div>
+                <div class="spec-value">Autodesk Fusion 360 Assembly</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Actuation Concept</div>
+                <div class="spec-value">Brushless Motor &amp; Gyro Counterweight</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Kinematic Linkage</div>
+                <div class="spec-value">Forearm Cuff, Gimbal &amp; Hand Support</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Controller Architecture</div>
+                <div class="spec-value">ESP32 + Accelerometer Feedback Loop</div>
+              </div>
+            </div>
+
+            <!-- Key Highlights & Contribution -->
+            <div style="margin-bottom: 0.75rem;">
+              <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase;">
+                // Engineering Highlights &amp; CAD Modelling:
+              </span>
+            </div>
+            <ul class="project-highlights-list">
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Biomedical Problem Identification:</strong> Studied the frequency and amplitude characteristics of pathological tremor (3–7 Hz) versus voluntary hand movement.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Mechanical Design &amp; CAD Modelling:</strong> Modeled the multi-component <code>wrist_stabilizer_3D</code> in Fusion 360 comprising <em>01_Forearm_Cuff</em>, <em>02_Outer_Yoke</em>, <em>03_Inner_Gimbal</em>, <em>04_Hand_Support</em>, and <em>05_Concept_Damper_Housing</em>.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Sensor &amp; Actuator Selection:</strong> Evaluated brushless motors, electromagnetic coils, gyroscopic inertial disks, and dual-axis potentiometers for responsive counter-torque generation.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>ESP32-Based Control Concept:</strong> Formulated active damping algorithm using real-time accelerometer and speed dial feedback.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Human-Centred Wearable Integration:</strong> Engineered silicone overmoulding and elastic forearm straps to minimize fatigue and maximize ergonomic compliance.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="project-tech-tags">
+              <span class="project-tag">Fusion 360 CAD</span>
+              <span class="project-tag">ESP32 Control</span>
+              <span class="project-tag">Gimbal Stabilization</span>
+              <span class="project-tag">Tremor Damping</span>
+              <span class="project-tag">Biomechanical Modelling</span>
+              <span class="project-tag">Human-Centred Design</span>
+            </div>
+          </div>
+
+          <!-- Right Gallery / Visual Pane -->
+          <div class="project-media-pane">
+            <div class="main-image-container" title="Click to view detailed exploded mechanical assembly render">
+              <img src="assets/images/bionova-exploded-concept.jpg" 
+                   alt="Exploded 3D CAD render of Bio Nova hand stabilization gauntlet showing motor, gyroscopic weight, and silicone overmoulding">
+              <div class="zoom-indicator">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span>Exploded View</span>
+              </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="image-thumbnails" style="grid-template-columns: repeat(2, 1fr);">
+              <div class="thumb-item active" 
+                   data-full="assets/images/bionova-exploded-concept.jpg" 
+                   data-caption="Bio Nova Exploded Concept: Detailed component callouts for brushless motor, gyroscopic weight, ESC, and silicone strap system">
+                <img src="assets/images/bionova-exploded-concept.jpg" alt="Exploded Concept Render">
+              </div>
+              <div class="thumb-item" 
+                   data-full="assets/images/bionova-cad-fusion360.png" 
+                   data-caption="Fusion 360 Browser: wrist_stabilizer_3D CAD tree with Forearm Cuff, Outer Yoke, Inner Gimbal, and Damper Housing">
+                <img src="assets/images/bionova-cad-fusion360.png" alt="Fusion 360 CAD Tree">
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+              2 Design Views: Exploded Wearable Gauntlet • Fusion 360 CAD Assembly
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- ====================================================================
+           PROJECT 4: ECG-BASED ARRHYTHMIA DETECTION
+           ==================================================================== -->
+      <article class="project-card" data-category="signal embedded" id="ecg-project">
+        <div class="project-card-layout">
+          
+          <!-- Left Info Pane -->
+          <div class="project-info-pane">
+            <div class="project-meta-header">
+              <span class="project-index">PROJECT // 04</span>
+              <span class="tech-tag" style="background: rgba(14, 165, 233, 0.15); border-color: rgba(14, 165, 233, 0.4); color: var(--accent-cyan);">
+                SIGNAL ACQUISITION &amp; ML
+              </span>
+            </div>
+
+            <h2 class="project-title">ECG-Based Arrhythmia Detection</h2>
+            <span class="project-category-badge">Biomedical Signal Processing and Embedded Systems • Signal Acquisition</span>
+
+            <p class="project-description">
+              "A biomedical engineering project combining ECG signal acquisition and machine learning for arrhythmia classification."
+            </p>
+
+            <!-- Hardware Specifications Grid -->
+            <div class="project-spec-grid">
+              <div class="spec-block">
+                <div class="spec-label">Analog Front-End</div>
+                <div class="spec-value">AD8232 Single-Lead Heart Rate Monitor</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Electrodes &amp; Leads</div>
+                <div class="spec-value">3-Lead Surface Gel Electrodes (Lead II)</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Processing &amp; GUI</div>
+                <div class="spec-value">MATLAB Live Analysis GUI &amp; Python</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Validation Model Result</div>
+                <div class="spec-value" style="color: var(--accent-cyan);">86.22% Test Accuracy (Decision Tree)</div>
+              </div>
+            </div>
+
+            <!-- Important Accuracy Note -->
+            <div style="background: rgba(14, 165, 233, 0.08); border-left: 3px solid var(--accent-cyan); padding: 0.75rem 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+              <strong>Academic Metric Notice:</strong> The reported model accuracy of <strong>86.22%</strong> represents algorithmic test classification on the MIT-BIH Arrhythmia Dataset, presented as a project evaluation result (not clinical diagnostic accuracy).
+            </div>
+
+            <!-- Key Highlights & Contribution -->
+            <div style="margin-bottom: 0.75rem;">
+              <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase;">
+                // Engineering Highlights &amp; Signal Pipeline:
+              </span>
+            </div>
+            <ul class="project-highlights-list">
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Hardware Acquisition Setup:</strong> Interfaced the AD8232 analog front-end with an ESP32/microcontroller testbench using 3 surface electrodes attached to subject limbs to capture cardiac signals.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>MATLAB Real-Time Telemetry:</strong> Built custom "AI-Powered ECG Assistant" desktop interface in MATLAB to plot live Lead II cardiac signals and monitor signal-to-noise ratio in real time.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Noise &amp; Artifact Handling:</strong> Implemented signal conditioning to detect baseline wander, 50 Hz powerline interference, and motion artifacts (displaying "STATUS: NOISY SIGNAL" when connection is disturbed).</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>ML Classification Pipeline:</strong> Extracted temporal and morphological features (QRS complexes, RR interval variance) and evaluated a Decision Tree classifier against the MIT-BIH Arrhythmia database.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="project-tech-tags">
+              <span class="project-tag">AD8232 Sensor</span>
+              <span class="project-tag">ESP32 Acquisition</span>
+              <span class="project-tag">MATLAB Signal GUI</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">MIT-BIH Database</span>
+              <span class="project-tag">Decision Tree (86.22%)</span>
+            </div>
+          </div>
+
+          <!-- Right Gallery / Visual Pane -->
+          <div class="project-media-pane">
+            <div class="main-image-container" title="Click to view hardware acquisition rig and electrode placement">
+              <img src="assets/images/ecg-hardware-acquisition-setup.jpg" 
+                   alt="Real ECG signal acquisition setup showing breadboard AD8232 sensor, surface electrodes on subject, and MATLAB code on laptop" 
+                   id="main-ecg-img">
+              <div class="zoom-indicator">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span>Live Testbench</span>
+              </div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="image-thumbnails" style="grid-template-columns: repeat(2, 1fr);">
+              <div class="thumb-item active" 
+                   data-full="assets/images/ecg-hardware-acquisition-setup.jpg" 
+                   data-caption="Physical Acquisition Testbench: AD8232 sensor on breadboard, electrode leads on body, streaming to MATLAB script">
+                <img src="assets/images/ecg-hardware-acquisition-setup.jpg" alt="Acquisition Testbench">
+              </div>
+              <div class="thumb-item" 
+                   data-full="assets/images/ecg-matlab-lead2-gui.jpg" 
+                   data-caption="MATLAB AI-Powered ECG Assistant UI: Live cardiac Lead II waveform plotting, noise status indicator, and BPM counter">
+                <img src="assets/images/ecg-matlab-lead2-gui.jpg" alt="MATLAB Lead II GUI">
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+              2 Testbench Views: Physical Hardware Electrode Setup • MATLAB Signal GUI
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- ====================================================================
+           PROJECT 5: BIOCRYPT-ROI
+           ==================================================================== -->
+      <article class="project-card" data-category="signal biomedical" id="biocrypt">
+        <div class="project-card-layout">
+          
+          <!-- Left Info Pane -->
+          <div class="project-info-pane">
+            <div class="project-meta-header">
+              <span class="project-index">PROJECT // 05</span>
+              <span class="tech-tag amber">
+                TOP 11 FINALIST • SIMATS 8-HR HACKATHON
+              </span>
+            </div>
+
+            <h2 class="project-title">BioCrypt-ROI: Content-Aware Visual Cryptography &amp; Tamper-Proof Security for Cancer Diagnostics</h2>
+            <span class="project-category-badge">Biomedical Image Processing, AI and Data Security • Hackathon Finalist</span>
+
+            <p class="project-description">
+              "BioCrypt-ROI is a healthcare-oriented image security project that combines content-aware visual cryptography and cryptographic hashing to protect sensitive cancer diagnostic images. The system focuses on securing brain MRI images and their tumour regions of interest while supporting secure image reconstruction and tamper detection."
+            </p>
+
+            <!-- Hardware Specifications Grid -->
+            <div class="project-spec-grid">
+              <div class="spec-block">
+                <div class="spec-label">Medical Image Dataset</div>
+                <div class="spec-value">BRISC2025 Brain MRI Diagnostic Dataset</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Cryptography Scheme</div>
+                <div class="spec-value">Visual Cryptography (k=3, n=4 Threshold)</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Integrity Verification</div>
+                <div class="spec-value">SHA-256 Cryptographic Hashing</div>
+              </div>
+              <div class="spec-block">
+                <div class="spec-label">Application Stack</div>
+                <div class="spec-value">Python, OpenCV, NumPy, Streamlit</div>
+              </div>
+            </div>
+
+            <!-- Key Highlights & Contribution -->
+            <div style="margin-bottom: 0.75rem;">
+              <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase;">
+                // Technical Highlights &amp; Interdisciplinary Development:
+              </span>
+            </div>
+            <ul class="project-highlights-list">
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Brain MRI Image Processing:</strong> Preprocessed axial brain MRI slices from BRISC2025 with contrast adjustment and skull stripping.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Tumour ROI Identification &amp; Masking:</strong> Isolated neoplastic regions of interest (ROI) to apply selective cryptographic obfuscation while preserving background anatomical landmarks.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Multi-Share Visual Cryptography:</strong> Implemented a (3, 4)-threshold secret sharing scheme where any 3 of 4 generated shares reconstruct the tumour, while fewer than 3 reveal zero information.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>SHA-256 Integrity Verification:</strong> Embedded cryptographic hashing to detect byte-level tampering or pixel corruption during tele-radiology transit.</span>
+              </li>
+              <li class="highlight-item">
+                <span class="bullet">▹</span>
+                <span><strong>Interactive Streamlit Application:</strong> Built an end-to-end web tool allowing clinicians to upload scans, split encrypted shares, verify hashes, and perform secure reconstruction.</span>
+              </li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="project-tech-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Streamlit</span>
+              <span class="project-tag">Visual Cryptography</span>
+              <span class="project-tag">SHA-256 Hashing</span>
+              <span class="project-tag">Brain MRI ROI</span>
+              <span class="project-tag">SIMATS Hackathon Top 11</span>
+            </div>
+          </div>
+
+          <!-- Right Gallery / Visual Pane -->
+          <div class="project-media-pane">
+            <div class="main-image-container" title="Click to view Streamlit visual cryptography multi-share encryption interface">
+              <img src="assets/images/biocrypt-roi-streamlit-demo.jpg" 
+                   alt="BioCrypt-ROI Streamlit app showing brain MRI encrypted into 4 shares under (3,4)-threshold scheme with SHA-256 hash">
+              <div class="zoom-indicator">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+                <span>Live Streamlit UI</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 1rem; padding: 0.85rem; background: rgba(7, 11, 18, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+              <span class="mono" style="color: var(--accent-cyan); font-weight: 700; display: block; margin-bottom: 0.25rem;">HACKATHON DEPLOYMENT</span>
+              Working Streamlit application executing (3, 4)-threshold secret sharing on brain MRI slices with instant SHA-256 hash generation for tamper-proof telemedicine exchange.
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ====================================================================
+           SECTION: ACHIEVEMENTS & CERTIFICATIONS (COMPACT & BALANCED)
+           ==================================================================== -->
+      <section class="section" id="achievements" style="border-top: 1px solid var(--border-subtle); padding-top: 3.5rem; padding-bottom: 2rem;">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <div class="section-badge">
+            <span class="mono">// RECOGNITIONS &amp; VERIFIED CREDENTIALS</span>
+          </div>
+          <h2 class="section-title" style="font-size: 2rem;">Achievements &amp; Certifications</h2>
+          <p style="color: var(--text-secondary); max-width: 600px; font-size: 0.95rem;">
+            Selected honors and technical coursework completed alongside hands-on engineering projects.
+          </p>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <!-- 1. Best Paper Award -->
+          <div class="achievement-card">
+            <div class="achievement-icon award">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="7"/>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Best Paper Award</h3>
+            <div class="achievement-meta">MORTISAFE PROJECT • TECHNICAL CONFERENCE</div>
+            <p class="achievement-desc">
+              Awarded for outstanding technical presentation and hardware safety concept in secondary mortuary monitoring.
+            </p>
+          </div>
+
+          <!-- 2. Hackathon Finalist -->
+          <div class="achievement-card">
+            <div class="achievement-icon award">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Top 11 Hackathon Finalist</h3>
+            <div class="achievement-meta">SIMATS ENGINEERING 8-HOUR HACKATHON</div>
+            <p class="achievement-desc">
+              Selected for the final evaluation round (Top 11 teams) for BioCrypt-ROI biomedical visual cryptography.
+            </p>
+          </div>
+
+          <!-- 3. MATLAB Onramp -->
+          <div class="achievement-card">
+            <div class="achievement-icon cert">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">MATLAB Onramp</h3>
+            <div class="achievement-meta">MATHWORKS CERTIFICATION</div>
+            <p class="achievement-desc">
+              Practical competency in matrix computation, vectorization, automated data acquisition, and signal plotting.
+            </p>
+          </div>
+
+          <!-- 4. Oracle Cloud Infrastructure Gen AI -->
+          <div class="achievement-card">
+            <div class="achievement-icon cert">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">OCI Generative AI Certified</h3>
+            <div class="achievement-meta">ORACLE CLOUD INFRASTRUCTURE</div>
+            <p class="achievement-desc">
+              Verified credential covering foundational concepts, LLM architectures, and cloud-based AI inference workflows.
+            </p>
+          </div>
+
+          <!-- 5. Python Certification -->
+          <div class="achievement-card">
+            <div class="achievement-icon cert">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="achievement-title">Python Certification</h3>
+            <div class="achievement-meta">TECHNICAL CERTIFICATION</div>
+            <p class="achievement-desc">
+              Core Python programming, data structures, scientific libraries (NumPy, OpenCV), and rapid prototyping.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Page 1 Return Banner -->
+      <div class="page-switch-banner" style="margin-top: 2rem;">
+        <div class="switch-content">
+          <div class="tech-tag" style="margin-bottom: 0.5rem;">NAVIGATE TO PAGE 1</div>
+          <h3>Return to Profile, Engineering Mindset &amp; Skills</h3>
+          <p>
+            Review academic background at DSCET, KiCad competencies, embedded systems skill tags, and the 5-step prototyping philosophy.
+          </p>
+        </div>
+        <a href="index.html" class="btn btn-secondary" style="white-space: nowrap;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Page 1: Profile</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER & CONTACT SECTION -->
+  <footer class="footer-cta">
+    <div class="container">
+      
+      <div class="cta-box">
+        <span class="tech-tag" style="margin-bottom: 1rem;">COLLABORATE &amp; CONNECT</span>
+        <h2 class="cta-headline">Ready for Hardware Hackathons &amp; Engineering Roles</h2>
+        <p class="cta-message">
+          "Interested in hardware innovation, embedded systems, PCB development and collaborative engineering projects. Always open to learning, building and exploring new technical challenges."
+        </p>
+
+        <div class="cta-actions">
+          <a href="mailto:akshidha78@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>akshidha78@gmail.com</span>
+          </a>
+
+          <button class="copy-email-btn btn btn-secondary" data-email="akshidha78@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <span>Copy Email Address</span>
+          </button>
+
+          <a href="https://github.com/Akshi06-shree" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub Profile</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/akshidha-shree-bba34b329" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span style="font-weight: 600; color: var(--text-primary);">Akshidha Shree G.R.</span> • B.E. Biomedical Engineering (2028) • DSCET
+        </div>
+        <div class="mono" style="font-size: 0.75rem;">
+          ENGINEERING PORTFOLIO // PAGE 2: PROJECTS &amp; PRACTICAL EXPERIENCE
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for High-Resolution Circuit & Hardware Inspection -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image inspection viewer">
+    <div class="lightbox-container">
+      <button class="lightbox-close" aria-label="Close modal">&times;</button>
+      <img src="" alt="Hardware View" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notice" id="toastNotice">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span id="toastText">Email copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

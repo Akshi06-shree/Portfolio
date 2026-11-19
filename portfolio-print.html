@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Page Engineering Portfolio | Akshidha Shree G.R. (PDF Print Document)</title>
+  <meta name="description" content="Exact two-page engineering portfolio document of Akshidha Shree G.R. - Biomedical Engineering student, PCB design, embedded systems, and hardware innovation.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/print.css">
+
+  <style>
+    /* Screen styling for the 2-page document preview */
+    body {
+      background: #06090F;
+      padding-bottom: 3rem;
+    }
+
+    .doc-control-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(13, 20, 36, 0.95);
+      border-bottom: 1px solid var(--accent-cyan);
+      backdrop-filter: blur(10px);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .doc-control-bar .title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .doc-control-bar .actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sheet-wrapper {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* Screen preview of each page sheet */
+    .sheet {
+      background: #0E1526;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius-md);
+      padding: 3rem;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    .sheet-number-tag {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent-cyan);
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Print media overrides for flawless 2-page output */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+      }
+      .doc-control-bar {
+        display: none !important;
+      }
+      .sheet-wrapper {
+        margin: 0 !important;
+        max-width: 100% !important;
+        gap: 0 !important;
+      }
+      .sheet {
+        background: #FFFFFF !important;
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+      }
+      .sheet-1 {
+        page-break-after: always !important;
+        break-after: page !important;
+        height: 100vh !important;
+        overflow: hidden;
+      }
+      .sheet-2 {
+        page-break-before: always !important;
+        break-before: page !important;
+        height: 100vh !important;
+        overflow: hidden;
+      }
+      .sheet-number-tag {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Screen Control Bar -->
+  <div class="doc-control-bar no-print">
+    <div class="title-group">
+      <a href="index.html" class="btn btn-outline btn-sm">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Back to Interactive Web Portfolio</span>
+      </a>
+      <span class="mono" style="font-size: 0.85rem; color: var(--accent-cyan); margin-left: 0.5rem;">
+        // TWO-PAGE ENGINEERING SUBMISSION SPECIFICATION
+      </span>
+    </div>
+
+    <div class="actions">
+      <span class="mono" style="font-size: 0.75rem; color: var(--text-muted); margin-right: 0.5rem;">
+        Format: 2 Pages A4/Letter
+      </span>
+      <button onclick="window.print()" class="btn btn-primary btn-sm" title="Print or save as PDF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="6 9 6 2 18 2 18 9"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <rect x="6" y="14" width="12" height="8"/>
+        </svg>
+        <span>Print / Save as PDF (Ctrl+P)</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="sheet-wrapper">
+
+    <!-- ====================================================================
+         PAGE 1: ABOUT ME, SKILLS AND ENGINEERING PROFILE
+         ==================================================================== -->
+    <section class="sheet sheet-1 print-page-1">
+      <div class="sheet-number-tag">PAGE 1 OF 2 // PROFILE &amp; SKILLS</div>
+
+      <!-- Header Banner -->
+      <div class="print-header" style="border-bottom: 2px solid var(--accent-cyan); padding-bottom: 1.25rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); letter-spacing: 0.08em; text-transform: uppercase;">
+            UNDERGRADUATE ENGINEERING PORTFOLIO
+          </span>
+          <h1 style="font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 0.2rem; margin-bottom: 0.2rem;">
+            AKSHIDHA SHREE G.R.
+          </h1>
+          <div style="font-size: 0.95rem; font-weight: 600; color: var(--text-secondary);">
+            Biomedical Engineering Student • PCB Design • Embedded Systems • Innovation Ambassador at DSCET
+          </div>
+        </div>
+
+        <div style="text-align: right; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; color: var(--text-secondary);">
+          <div>Email: <strong style="color: var(--accent-cyan);">akshidha78@gmail.com</strong></div>
+          <div>GitHub: <span style="color: var(--text-primary);">github.com/Akshi06-shree</span></div>
+          <div>LinkedIn: <span style="color: var(--text-primary);">linkedin.com/in/akshidha-shree-bba34b329</span></div>
+          <div>DSCET • Mamallapuram, Tamil Nadu, India</div>
+        </div>
+      </div>
+
+      <!-- Professional Objective / Bio -->
+      <div style="margin-bottom: 1.5rem;">
+        <div class="print-sec-title mono" style="font-size: 0.95rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          // 01. Engineering Profile &amp; Focus
+        </div>
+        <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-secondary);">
+          Third-year Biomedical Engineering student at Dhanalakshmi Srinivasan College of Engineering and Technology (DSCET) interested in the intersection of electronics, embedded systems, and healthcare innovation. Hands-on experience developing physical hardware prototypes: designing 2-layer PCBs using KiCad, interfacing physiological sensors with the ESP32, hand soldering through-hole components, and translating clinical requirements into functional electronic solutions.
+        </p>
+      </div>
+
+      <!-- Technical Skills Matrix -->
+      <div style="margin-bottom: 1.5rem;">
+        <div class="print-sec-title mono" style="font-size: 0.95rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          // 02. Technical Competencies &amp; Toolkit
+        </div>
+
+        <div class="print-skills-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          
+          <div class="print-skill-group" style="background: rgba(7, 11, 18, 0.5); border: 1px solid var(--border-subtle); padding: 0.85rem; border-radius: var(--radius-sm);">
+            <div class="print-skill-group-title mono" style="font-size: 0.82rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.4rem;">
+              ELECTRONICS &amp; PCB DESIGN
+            </div>
+            <div class="print-skill-tags" style="font-size: 0.82rem; line-height: 1.5; color: var(--text-primary);">
+              KiCad (Schematic &amp; Layout), Schematic Design, PCB Layout &amp; Routing, Through-Hole Component Assembly, Basic Circuit Testing and Troubleshooting, Hand Soldering, Timer Circuits (NE555).
+            </div>
+          </div>
+
+          <div class="print-skill-group" style="background: rgba(7, 11, 18, 0.5); border: 1px solid var(--border-subtle); padding: 0.85rem; border-radius: var(--radius-sm);">
+            <div class="print-skill-group-title mono" style="font-size: 0.82rem; font-weight: 700; color: #34D399; margin-bottom: 0.4rem;">
+              EMBEDDED SYSTEMS &amp; SENSORS
+            </div>
+            <div class="print-skill-tags" style="font-size: 0.82rem; line-height: 1.5; color: var(--text-primary);">
+              ESP32 DevKit, Arduino Ecosystem, Embedded C Fundamentals, Sensor Interfacing, UART &amp; I2C Communication Protocols, Microcontrollers, Sensors and Actuators, 16x2 I2C LCD Integration.
+            </div>
+          </div>
+
+          <div class="print-skill-group" style="background: rgba(7, 11, 18, 0.5); border: 1px solid var(--border-subtle); padding: 0.85rem; border-radius: var(--radius-sm);">
+            <div class="print-skill-group-title mono" style="font-size: 0.82rem; font-weight: 700; color: #FBBF24; margin-bottom: 0.4rem;">
+              PROGRAMMING &amp; ENGINEERING TOOLS
+            </div>
+            <div class="print-skill-tags" style="font-size: 0.82rem; line-height: 1.5; color: var(--text-primary);">
+              Python, MATLAB &amp; Simulink, Autodesk Fusion 360 (CAD Assemblies), SolidWorks, Tinkercad Circuits, Bioinformatics, HTML &amp; CSS, Streamlit Framework.
+            </div>
+          </div>
+
+          <div class="print-skill-group" style="background: rgba(7, 11, 18, 0.5); border: 1px solid var(--border-subtle); padding: 0.85rem; border-radius: var(--radius-sm);">
+            <div class="print-skill-group-title mono" style="font-size: 0.82rem; font-weight: 700; color: #C084FC; margin-bottom: 0.4rem;">
+              BIOMEDICAL ENGINEERING
+            </div>
+            <div class="print-skill-tags" style="font-size: 0.82rem; line-height: 1.5; color: var(--text-primary);">
+              Biomedical Instrumentation, Human Anatomy and Physiology, Medical Equipment Familiarity, Biomedical Signal Processing fundamentals, AD8232 ECG Acquisition, Noise Artifact Filtering.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Engineering Mindset & Methodology -->
+      <div style="margin-bottom: 1.5rem;">
+        <div class="print-sec-title mono" style="font-size: 0.95rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          // 03. Engineering Mindset &amp; Prototyping Trajectory
+        </div>
+        <blockquote style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-primary); border-left: 3px solid var(--accent-cyan); padding-left: 1rem; margin-bottom: 0.75rem;">
+          "I enjoy learning by building. From understanding circuit diagrams to designing PCB layouts and experimenting with microcontrollers, I am continuously developing my ability to turn engineering concepts into functional prototypes."
+        </blockquote>
+        <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+          <strong>Hands-on Bench Flow:</strong> Schematic Verification (KiCad) ➔ Breadboard Circuit Validation (ESP32 / AD8232) ➔ 2-Layer PCB Layout &amp; DRC ➔ Through-Hole Component Soldering ➔ Firmware &amp; Telemetry Testing.
+        </div>
+      </div>
+
+      <!-- Education & Institutional Credentials -->
+      <div>
+        <div class="print-sec-title mono" style="font-size: 0.95rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+          // 04. Education &amp; Leadership
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+          <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+            Bachelor of Engineering (B.E.) in Biomedical Engineering
+          </div>
+          <div class="mono" style="font-size: 0.82rem; color: var(--accent-cyan); font-weight: 600;">
+            Expected Graduation: 2028
+          </div>
+        </div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary);">
+          Dhanalakshmi Srinivasan College of Engineering and Technology (DSCET), Mamallapuram, Tamil Nadu, India.
+        </div>
+        <div style="font-size: 0.82rem; color: #34D399; margin-top: 0.2rem; font-weight: 500;">
+          • Role: Innovation Ambassador at DSCET (Leading student technical hackathons &amp; hardware design workshops)
+        </div>
+      </div>
+
+      <!-- Footer Note of Page 1 -->
+      <div class="print-footer-note" style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+        <span>PORTFOLIO PAGE 1 // PROFILE, TECHNICAL SKILLS &amp; MINDSET</span>
+        <span>CONTINUED ON PAGE 2 ➔ PROJECTS &amp; CREDENTIALS</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 2: PROJECTS AND PRACTICAL EXPERIENCE
+         ==================================================================== -->
+    <section class="sheet sheet-2 print-page-2">
+      <div class="sheet-number-tag">PAGE 2 OF 2 // PROJECTS &amp; HARDWARE</div>
+
+      <!-- Page 2 Header -->
+      <div class="print-header" style="border-bottom: 2px solid var(--accent-cyan); padding-bottom: 0.85rem; margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="mono" style="font-size: 0.75rem; color: var(--accent-cyan); letter-spacing: 0.08em; text-transform: uppercase;">
+            HARDWARE &amp; EMBEDDED SYSTEMS PORTFOLIO
+          </span>
+          <h2 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 0.15rem; margin-bottom: 0;">
+            Engineering Projects &amp; Practical Experience
+          </h2>
+        </div>
+        <div class="mono" style="text-align: right; font-size: 0.78rem; color: var(--text-secondary);">
+          Akshidha Shree G.R. • DSCET BME
+        </div>
+      </div>
+
+      <!-- 5 Condensed, High-Impact Projects List -->
+      <div class="print-projects-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
+
+        <!-- Project 1: Heart-Shaped LED PCB (Special Visual Importance) -->
+        <div class="print-project-item" style="border: 1px solid var(--border-subtle); border-left: 3px solid var(--accent-cyan); padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: rgba(7, 11, 18, 0.4);">
+          <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; align-items: center;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);">
+                  1. Custom Heart-Shaped LED PCB
+                </span>
+                <span class="tech-tag" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;">PCB DESIGN &amp; FABRICATION</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.35rem;">
+                My first self-designed and fabricated PCB project. Designed the circuit schematic and PCB layout using KiCad, completed circuit checks, and explored the complete process from circuit design to physical PCB fabrication.
+              </p>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4;">
+                <strong style="color: var(--text-primary);">Components:</strong> NE555 Timer IC, 16x LEDs, Resistors, Timing Capacitor, CR2450 coin cell battery, Slide switch.<br>
+                <strong style="color: var(--accent-cyan);">Highlights:</strong> Schematic capture, 2-layer copper layout in KiCad, component placement, through-hole hand soldering, physical board power testing.
+              </div>
+            </div>
+            <!-- Thumbnail of real board -->
+            <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/images/heart-pcb-assembled-lit.jpg" alt="Fabricated Heart PCB" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: MortiSafe -->
+        <div class="print-project-item" style="border: 1px solid var(--border-subtle); border-left: 3px solid #F59E0B; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: rgba(7, 11, 18, 0.4);">
+          <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; align-items: center;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);">
+                  2. MortiSafe – Secondary Safety Alert Layer for Mortuary Chambers
+                </span>
+                <span class="tech-tag amber" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;">🏆 BEST PAPER AWARD</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.35rem;">
+                A healthcare safety concept developed to provide an additional alert mechanism for mortuary chamber staff using sensor-based monitoring. Received the Best Paper Award at a technical conference.
+              </p>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4;">
+                <strong style="color: var(--text-primary);">Technologies:</strong> ESP32 DevKit, sensor integration, embedded C++, 16x2 I2C LCD, status indicator LEDs.<br>
+                <strong style="color: #FBBF24;">Contribution:</strong> Sensor selection, circuit development, hardware integration, prototype testing.
+              </div>
+            </div>
+            <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/images/mortisafe-esp32-prototype.jpg" alt="MortiSafe Prototype" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Bio Nova -->
+        <div class="print-project-item" style="border: 1px solid var(--border-subtle); border-left: 3px solid #C084FC; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: rgba(7, 11, 18, 0.4);">
+          <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; align-items: center;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);">
+                  3. Bio Nova – Adaptive Hand Stabilization Device
+                </span>
+                <span class="tech-tag purple" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;">CONCEPT / PROTOTYPE</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.35rem;">
+                Wearable hand stabilization concept designed to reduce involuntary hand tremors while preserving intentional movements during precision activities. (Design/prototype project; not clinically validated).
+              </p>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4;">
+                <strong style="color: var(--text-primary);">Tools &amp; Stack:</strong> Autodesk Fusion 360, brushless motors, gyroscopic counterweights, ESP32 active damping control.<br>
+                <strong style="color: #C084FC;">Highlights:</strong> Tremor biomechanics, multi-part CAD modeling (gimbal, cuff, damper housing), human-centred wearable design.
+              </div>
+            </div>
+            <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/images/bionova-exploded-concept.jpg" alt="Bio Nova Render" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: ECG-Based Arrhythmia Detection -->
+        <div class="print-project-item" style="border: 1px solid var(--border-subtle); border-left: 3px solid #0EA5E9; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: rgba(7, 11, 18, 0.4);">
+          <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; align-items: center;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);">
+                  4. ECG-Based Arrhythmia Detection
+                </span>
+                <span class="tech-tag" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;">ACCURACY: 86.22% RESULT</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.35rem;">
+                Biomedical signal acquisition and machine learning pipeline for cardiac arrhythmia classification using Lead II electrodes and MATLAB real-time plotting.
+              </p>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4;">
+                <strong style="color: var(--text-primary);">Technologies:</strong> AD8232 ECG sensor, ESP32, 3-lead body electrodes, MATLAB GUI, Python, Decision Tree classifier.<br>
+                <strong style="color: var(--accent-cyan);">Project Result:</strong> Reported 86.22% classification accuracy on MIT-BIH dataset test evaluation (not clinical diagnostic claim).
+              </div>
+            </div>
+            <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/images/ecg-hardware-acquisition-setup.jpg" alt="ECG Hardware Setup" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: BioCrypt-ROI -->
+        <div class="print-project-item" style="border: 1px solid var(--border-subtle); border-left: 3px solid #34D399; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: rgba(7, 11, 18, 0.4);">
+          <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; align-items: center;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem;">
+                <span style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary);">
+                  5. BioCrypt-ROI: Visual Cryptography for Cancer Diagnostics
+                </span>
+                <span class="tech-tag emerald" style="font-size: 0.68rem; padding: 0.15rem 0.45rem;">TOP 11 HACKATHON</span>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.35rem;">
+                Healthcare-oriented image security combining content-aware visual cryptography (k=3, n=4) and SHA-256 cryptographic hashing to protect sensitive brain MRI cancer scans.
+              </p>
+              <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4;">
+                <strong style="color: var(--text-primary);">Stack:</strong> Python, Streamlit, BRISC2025 Brain MRI dataset, ROI extraction, SHA-256 integrity verification.<br>
+                <strong style="color: #34D399;">Achievement:</strong> Selected for final round (Top 11 teams) at SIMATS Engineering 8-hour hackathon.
+              </div>
+            </div>
+            <div style="width: 140px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="assets/images/biocrypt-roi-streamlit-demo.jpg" alt="BioCrypt-ROI Streamlit" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Achievements & Credentials Ribbon -->
+      <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);">
+        <div class="print-sec-title mono" style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">
+          // Selected Honors &amp; Verified Certifications
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.65rem; font-size: 0.75rem;">
+          <div style="background: rgba(7, 11, 18, 0.5); padding: 0.4rem 0.6rem; border-radius: 3px; border: 1px solid var(--border-subtle);">
+            🏆 <strong style="color: var(--text-primary);">Best Paper Award</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.7rem;">MortiSafe • Conference</span>
+          </div>
+          <div style="background: rgba(7, 11, 18, 0.5); padding: 0.4rem 0.6rem; border-radius: 3px; border: 1px solid var(--border-subtle);">
+            🏅 <strong style="color: var(--text-primary);">Top 11 Finalist</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.7rem;">SIMATS 8-Hr Hackathon</span>
+          </div>
+          <div style="background: rgba(7, 11, 18, 0.5); padding: 0.4rem 0.6rem; border-radius: 3px; border: 1px solid var(--border-subtle);">
+            📜 <strong style="color: var(--text-primary);">MATLAB Onramp</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.7rem;">MathWorks Certified</span>
+          </div>
+          <div style="background: rgba(7, 11, 18, 0.5); padding: 0.4rem 0.6rem; border-radius: 3px; border: 1px solid var(--border-subtle);">
+            📜 <strong style="color: var(--text-primary);">OCI Gen AI &amp; Python</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.7rem;">Oracle &amp; Python Certs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page 2 Footer -->
+      <div class="print-footer-note" style="margin-top: 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+        <span>PORTFOLIO PAGE 2 // HARDWARE INNOVATION, SENSOR INTERFACING &amp; ACHIEVEMENTS</span>
+        <span>CONTACT: AKSHIDHA78@GMAIL.COM • GITHUB: AKSHI06-SHREE</span>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
